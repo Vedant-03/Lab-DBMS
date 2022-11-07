@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+    background-color: white;
+}
+
+div {
+    margin: 20px 0px;
+}
+
+
+.nav_bar span {
+    font-size: 130%;
+    margin: 10%;
+}
+
+.desc{
+    margin: 20px 20px 20px 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.phy {
+  background-color: #92C288;
+}
+  
+.container {
+    align-self: right;
+    padding: 2vh 12vw;
+}
+
+.chem, .phy, .cs {
+    display: flex;
+}
+
+#chem_desc h3 {
+    text-align: center;
+}
+
+
+#btn {
+  align-items: center;
+  margin: 50px 0 0 170px;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#btn:active, #btn:hover {
+  outline: 0;
+  color: white;
+}
+
+#btn span {
+  background-color: whitesmoke;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+#btn:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+
+#phy_desc button {
+  background-image: linear-gradient(144deg,#F9F9BD, #92C288 50%,#008C6A);
+  color: #2F4858;
+}
+
+
+#chem_lab {
+    width: 35vw;
+    height: 40vh;
+    border-radius: 10px 0 0 10px;
+}
+
+#phy_lab {
+    width: 35vw;
+    height: 40vh;
+    /* float: right; */
+    border-radius: 10px 0 0 10px;
+}
+
+#cs_lab {
+    width: 35vw;
+    height: 40vh;
+    border-radius: 10px 0 0 10px;
+}
+
+a {
+  text-decoration: none;
+}
