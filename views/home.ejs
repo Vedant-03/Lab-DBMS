@@ -60,6 +60,32 @@
 
         </div>
 
+        <% if(session.user_id) { %>
+
+           <div class="add_item">
+                <h4>Add Item</h4>
+                <form action="">
+                    <label for="img">Image:</label>
+                    <input type="text" name="img" id="">
+                    <label for="model">Model:</label>
+                    <input type="text" name="model" id="">
+                    <label for="qty">Quantity:</label>
+                    <input type="number" name="qty" id="">
+                    <label for="desc">About:</label>
+                    <input type="text" name="desc" id="">
+                </form>
+           </div>
+
+           <div class="upd_query">
+                <h4>Update Query</h4>
+                <form action="" method="post">
+                    <label for="qid">Query_Id:</label>
+                    <input type="text" name="qid" id="qid">
+                </form>
+           </div>
+
+        <% } %>
+
 
         <div class="footer">
             <hr size="1" noshade>

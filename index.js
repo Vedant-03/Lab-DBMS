@@ -8,6 +8,11 @@ router.get('/', function(req, res, next) {
   res.render('home', { title: 'Express', session : req.session });
 });
 
+router.get('/login', function(req, res, next) {
+    console.log("gfcjgvb");
+    res.render('index', { title: 'Express', session : req.session });
+  });
+
 router.post('/login', function(request, response, next){
 
     var user_email_address = request.body.user_email_address;
@@ -31,7 +36,7 @@ router.post('/login', function(request, response, next){
                     {
                         request.session.user_id = data[count].email;
 
-                        response.redirect("/");
+                        response.redirect('/');
                     }
                     else
                     {
