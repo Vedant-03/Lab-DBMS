@@ -8,6 +8,10 @@ var session = require('express-session');
 
 var indexRouter = require('./index');
 var usersRouter = require('./routes/users');
+var labRouter = require('./lab');
+var itemRouter = require('./item');
+var queryRouter = require('./query.js');
+var upd_qRouter = require('./upd_q.js');
 // var loginRouter = require('./login');
 
 var app = express();
@@ -28,6 +32,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/upd_q', upd_qRouter);
+app.use('/queries', queryRouter);
+app.use('/item', itemRouter);
+app.use('/lab', labRouter)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use('/login', loginRouter);
@@ -47,5 +55,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

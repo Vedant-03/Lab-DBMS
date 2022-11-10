@@ -16,9 +16,9 @@
         <hr size="2" noshade>
 
         <div class="nav_bar">
-            <span ><a href="./index.ejs">Home</a></span>
+            <span ><a href="/">Home</a></span>
             <span>Labs</span>
-            <span><a href="./Queries.html">Queries</a></span>
+            <span><a href="/queries">Queries</a></span>
             
             <% if(session.user_id) { %>
 
@@ -36,7 +36,7 @@
                 <div id="chem_desc" class="container">
                     <h3>Chemistry Lab</h3>
                     It manages information about chemicals and equipments in chemistry lab efficiently.
-                    <button id="btn"><span><a href="./chem-lab.html">To Chemistry Lab</a></span></button>
+                    <button id="btn"><span><a href="/lab/chem">To Chemistry Lab</a></span></button>
                 </div>
             </div>
             
@@ -45,7 +45,7 @@
                 <div id="phy_desc" class="container">
                     <h3>Physics Lab</h3>
                     Here you will find details about experimental apparatus.
-                    <button id="btn"><span><a href="./phy-lab.html">To Physics Lab</a></span></button>
+                    <button id="btn"><span><a href="/lab/phy">To Physics Lab</a></span></button>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
                 <div id="cs_desc" class="container">
                     <h3>Computer Lab</h3>
                     It manages information about computer and other related equipments in lab efficiently.
-                    <button id="btn"><span><a href="./cs-lab.html">To Computer Lab</a></span></button>
+                    <button id="btn"><span><a href="/lab/cs">To Computer Lab</a></span></button>
                 </div>
             </div>
 
@@ -64,23 +64,29 @@
 
            <div class="add_item">
                 <h4>Add Item</h4>
-                <form action="">
-                    <label for="img">Image:</label>
-                    <input type="text" name="img" id="">
+                <form action="/item" method="post">
+                    <label for="lab">Lab:</label>
+                    <input type="text" name="lab" id="">
+                    <label for="room_no">Room_No:</label>
+                    <input type="number" name="room_no" id="">
+                    <label for="imgs">Image:</label>
+                    <input type="text" name="imgs" id="">
                     <label for="model">Model:</label>
                     <input type="text" name="model" id="">
                     <label for="qty">Quantity:</label>
                     <input type="number" name="qty" id="">
                     <label for="desc">About:</label>
                     <input type="text" name="desc" id="">
+                    <input type="submit" name="submit" id="">
                 </form>
            </div>
 
            <div class="upd_query">
                 <h4>Update Query</h4>
-                <form action="" method="post">
+                <form action="/upd_q" method="post">
                     <label for="qid">Query_Id:</label>
                     <input type="text" name="qid" id="qid">
+                    <input type="submit" name="qsubmit" id="">
                 </form>
            </div>
 

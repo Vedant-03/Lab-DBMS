@@ -9,7 +9,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/login', function(req, res, next) {
-    console.log("gfcjgvb");
     res.render('index', { title: 'Express', session : req.session });
   });
 
