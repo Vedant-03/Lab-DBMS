@@ -12,6 +12,7 @@ var labRouter = require('./lab');
 var itemRouter = require('./item');
 var queryRouter = require('./query.js');
 var upd_qRouter = require('./upd_q.js');
+var contactRouter = require('./contact.js');
 // var loginRouter = require('./login');
 
 var app = express();
@@ -33,6 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/upd_q', upd_qRouter);
+app.use('/contact', contactRouter);
 app.use('/queries', queryRouter);
 app.use('/item', itemRouter);
 app.use('/lab', labRouter)

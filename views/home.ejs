@@ -11,9 +11,11 @@
         <link rel="stylesheet" href="/CSS/index_style.css">
     </head>
     <body>
-        <hr size="2" noshade>
-        <h1 style="text-align: center;">Laboratory Database Management System</h1>
-        <hr size="2" noshade>
+        <div id="hed">
+            <hr size="2" noshade>
+            <h1 style="text-align: center;">Laboratory Database Management System</h1>
+            <hr size="2" noshade>
+        </div>
 
         <div class="nav_bar">
             <span ><a href="/">Home</a></span>
@@ -22,7 +24,7 @@
             
             <% if(session.user_id) { %>
 
-                <a href="/logout" class="btn btn-primary">Logout</a>
+                <span><a href="/logout">Logout</a></span>
 
             <% } else { %>
                 <span><a href="/login">Login</a></span>
@@ -95,7 +97,8 @@
 
         <div class="footer">
             <hr size="1" noshade>
-            <span>Contact Us</span>
+            <span><a href="/contact">Contact Us</a></span>
+            <hr size="1" noshade>
         </div>
 
         <script src="" async defer></script>

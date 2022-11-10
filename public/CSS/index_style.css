@@ -1,6 +1,24 @@
 body {
     margin: 0px;
-    background-color: white;
+    background-color: lightblue;
+}
+
+#hed {
+  background-color: white;
+}
+
+.footer {
+  background-color: white;
+}
+
+.footer span {
+  font-size: 130%;
+  margin: 1.8%;
+}
+
+
+a:visited {
+  text-decoration: none;
 }
 
 div {
@@ -28,9 +46,9 @@ div {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.phy {
+/* .phy {
   background-color: #92C288;
-}
+} */
   
 .container {
     align-self: right;
@@ -49,7 +67,7 @@ div {
 #btn {
   align-items: center;
   margin: 50px 0 0 170px;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  /* background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -98,10 +116,10 @@ div {
 }
 
 
-#phy_desc button {
+/* #phy_desc button {
   background-image: linear-gradient(144deg,#F9F9BD, #92C288 50%,#008C6A);
   color: #2F4858;
-}
+} */
 
 
 #chem_lab {

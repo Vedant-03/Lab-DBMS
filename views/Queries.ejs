@@ -16,6 +16,9 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <hr size="2" noshade>
+        <h1 style="text-align: center;"><a href="/">Laboratory Database Management System</a></h1>
+        <hr size="2" noshade>
         <p>Here you will be able to submit queries.</p>
         <form action="/queries" method="post">
             <label for="author">Author:</label>
@@ -41,21 +44,25 @@
                 <tbody>
                     <% if(data.length){
                         for(var i = 0; i < data.length; i++){ 
-                            if(data[i].i_id){%>
+                            if(data[i].q_id){%>
                                 <tr>
                                     <td><%= data[i].q_id %></td>
                                     <td><%= data[i].author %></td>
                                     <td><%= data[i].descr %></td>
                                     <td><%= data[i].in_date %></td>
                                     <td><%= data[i].solve_date %></td>
-                                    <td><%= data[i].solved %></td>
+                                    <% if(data[i].solved){ %>
+                                        <td>Solved</td>
+                                    <% }else{ %>
+                                        <td>Unsolved</td>
+                                    <% } %>
                                 </tr>
                             <% }
                         }
                     }
                     else{ %>
                         <tr>
-                            <td>No items to display</td>
+                            <td colspan="6">No items to display</td>
                         </tr>
                     <% } %>
                 </tbody>

@@ -21,7 +21,6 @@ router.get("/", (req,res) => {
             res.render("Queries", {data: rows});
         }
     })
-    res.render("");
 });
 
 router.post('/', (req,res) => {
@@ -30,11 +29,11 @@ router.post('/', (req,res) => {
 
     var indate = new Date();
     var date = indate.getFullYear() + "-" + (indate.getMonth()+1) + "-" + indate.getDate();
-
+    console.log(`INSERT INTO query (author, descr, in_date) VALUES("${auth}", "${desc}", "${date}")`)
     if(auth && desc)
     {
         query = `INSERT INTO query (author, descr, in_date) VALUES("${auth}", "${desc}", "${date}")`;
-        // console.log(`INSERT INTO query (author, descr, in_date) VALUES("${auth}", "${desc}", "${date}")`)
+        console.log(`INSERT INTO query (author, descr, in_date) VALUES("${auth}", "${desc}", "${date}")`)
         database.query(query, (error, data) => {
             res.redirect("/");
             res.end();
