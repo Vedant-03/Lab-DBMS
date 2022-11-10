@@ -9,7 +9,19 @@ var router = express.Router();
 router.use(bodyparser.urlencoded({extended:true}));
 
 router.get("/", (req,res) => {
-    res.render("Queries");
+    query = `SELECT * FROM query;`;
+    database.query(query, (error, rows) => {
+        if(error)   throw error;
+        // console.log(rows[0].i_id);
+        // console.log(rows[0].image);
+        // console.log(rows[0].model);
+        // console.log(rows[0].quantity);
+        // console.log(rows[0].desc);
+        if(!error){
+            res.render("Queries", {data: rows});
+        }
+    })
+    res.render("");
 });
 
 router.post('/', (req,res) => {

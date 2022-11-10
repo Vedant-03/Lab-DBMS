@@ -10,7 +10,7 @@
         <title>Query</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/CSS/lab.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -24,6 +24,44 @@
             <input type="text" name="desc" id="">
             <input type="submit">
         </form>
+
+        <div>
+            <h4>Queries</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Query ID</th>
+                        <th>Author</th>
+                        <th>Description</th>
+                        <th>In-date</th>
+                        <th>Solved date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(data.length){
+                        for(var i = 0; i < data.length; i++){ 
+                            if(data[i].i_id){%>
+                                <tr>
+                                    <td><%= data[i].q_id %></td>
+                                    <td><%= data[i].author %></td>
+                                    <td><%= data[i].descr %></td>
+                                    <td><%= data[i].in_date %></td>
+                                    <td><%= data[i].solve_date %></td>
+                                    <td><%= data[i].solved %></td>
+                                </tr>
+                            <% }
+                        }
+                    }
+                    else{ %>
+                        <tr>
+                            <td>No items to display</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+
         <script src="" async defer></script>
     </body>
 </html>
