@@ -7,11 +7,33 @@ var database = require('./database');
 
 
 router.get("/phy", (req,res) => {
-    res.render("phy-lab");
+    query = `SELECT * FROM phy_1; SELECT * FROM phy_2;`;
+    database.query(query, (error, rows) => {
+        if(error)   throw error;
+        // console.log(rows[0].i_id);
+        // console.log(rows[0].image);
+        // console.log(rows[0].model);
+        // console.log(rows[0].quantity);
+        // console.log(rows[0].desc);
+        if(!error){
+            res.render("phy-lab", {data: rows});
+        }
+    })
 });
 
 router.get("/chem", (req,res) => {
-    res.render("chem-lab");
+    query = `SELECT * FROM chem_1; SELECT * FROM chem_2;`;
+    database.query(query, (error, rows) => {
+        if(error)   throw error;
+        // console.log(rows[0].i_id);
+        // console.log(rows[0].image);
+        // console.log(rows[0].model);
+        // console.log(rows[0].quantity);
+        // console.log(rows[0].desc);
+        if(!error){
+            res.render("chem-lab", {data: rows});
+        }
+    })
 });
 
 router.get("/cs", (req,res) => {
